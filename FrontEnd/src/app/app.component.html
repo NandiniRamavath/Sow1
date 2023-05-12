@@ -1,0 +1,10 @@
+<div class="container-fluid m-0 p-0">
+   <div class="row d-flex">
+     <div [ngClass]="headerEvent ? 'col-md-9' : 'col-md-12'">
+      <router-outlet></router-outlet>
+      </div>
+     <div [ngClass]="headerEvent ? 'col-md-0' : 'col-md-12'">
+       <app-header (eventChange)="update($event)"></app-header>
+      </div>
+    </div>
+</div>
